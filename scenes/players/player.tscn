@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxtbsg14p30si"]
+
+[ext_resource type="Script" path="res://scripts/players/player.gd" id="1_ao2o1"]
+[ext_resource type="Texture2D" uid="uid://ltr06ifuqreb" path="res://icon.svg" id="1_exwgw"]
+[ext_resource type="PackedScene" uid="uid://bkc2qijvriojc" path="res://scenes/score_manager.tscn" id="3_cblva"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yj4d7"]
+radius = 72.0069
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 6
+script = ExtResource("1_ao2o1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_exwgw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yj4d7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -4000
+limit_top = -4000
+limit_right = 4000
+limit_bottom = 4000
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="ShootingTimer" type="Timer" parent="."]
+
+[node name="BulletMarker" type="Marker2D" parent="."]
+
+[node name="ScoreManager" parent="." instance=ExtResource("3_cblva")]

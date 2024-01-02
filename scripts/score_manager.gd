@@ -40,3 +40,14 @@ func load_score():
 			score_index += 1
 	
 	return score_data
+	
+func save_score(score_value, score_name):
+	var result = []
+	var highscores = load_score()
+	
+	dict(sorted(highscores.items(), key=lambda item: item[1]))
+	
+	print(highscores)
+	
+	
+	print(result)

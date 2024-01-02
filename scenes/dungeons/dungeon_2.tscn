@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=3 uid="uid://bs7ajjmkwu8ji"]
+
+[ext_resource type="Script" path="res://scripts/dungeons/dungeon_1.gd" id="1_okfjn"]
+[ext_resource type="Texture2D" uid="uid://dlgy2wyg1atkv" path="res://assets/sprites/dungeons/dungeon_2.png" id="2_lthbq"]
+[ext_resource type="PackedScene" uid="uid://n2driv4q4n50" path="res://scenes/enemy_spawner.tscn" id="3_ho0li"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wc4av"]
+size = Vector2(406.25, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvma4"]
+size = Vector2(190, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wcdf"]
+size = Vector2(386.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8btb"]
+size = Vector2(17, 441.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ritvk"]
+size = Vector2(18, 285.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cweve"]
+size = Vector2(286.75, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbrcl"]
+size = Vector2(20, 197)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jucwa"]
+size = Vector2(14.5, 293)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj26a"]
+size = Vector2(17, 293)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo056"]
+size = Vector2(115, 20)
+
+[node name="Dungeon2" type="Node2D"]
+script = ExtResource("1_okfjn")
+
+[node name="DungeonSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_lthbq")
+
+[node name="CollisionGroup" type="StaticBody2D" parent="."]
+
+[node name="1" type="CollisionShape2D" parent="CollisionGroup"]
+position = Vector2(-0.125, 383)
+shape = SubResource("RectangleShape2D_wc4av")
+
+[node name="2" type="CollisionShape2D" parent="CollisionGroup"]
+position = Vector2(-290, 78)
+shape = SubResource("RectangleShape2D_rvma4")
+
+[node name="3" type="CollisionShape2D" parent="CollisionGroup"]
+position = Vector2(-174, -338)
+shape = SubResource("RectangleShape2D_5wcdf")
+
+[node name="4" type="CollisionShape2D" parent="CollisionGroup"]
+position = Vector2(-378.5, -152.125)
+shape = SubResource("RectangleShape2D_l8btb")
+
+[node name="5" type="CollisionShape2D" parent="CollisionGroup"]
+position = Vector2(199, 222.75)
+shape = SubResource("RectangleShape2D_ritvk")
+
+[node name="6" type="CollisionShape2D" parent="CollisionGroup"]
+position = Vector2(155, -182)
+shape = SubResource("RectangleShape2D_cweve")
+
+[node name="7" type="CollisionShape2D" parent="CollisionGroup"]
+position = Vector2(20, -274)
+shape = SubResource("RectangleShape2D_bbrcl")
+
+[node name="8" type="CollisionShape2D" parent="CollisionGroup"]
+position = Vector2(-201.75, 224.5)
+shape = SubResource("RectangleShape2D_jucwa")
+
+[node name="9" type="CollisionShape2D" parent="CollisionGroup"]
+position = Vector2(307.5, -55.5)
+shape = SubResource("RectangleShape2D_fj26a")
+
+[node name="10" type="CollisionShape2D" parent="CollisionGroup"]
+position = Vector2(258.5, 90)
+shape = SubResource("RectangleShape2D_eo056")
+
+[node name="PlayerSpawnPoint" type="Marker2D" parent="."]
+
+[node name="EnemiesContainer" type="Node2D" parent="."]
+
+[node name="EnemySpawner" parent="." instance=ExtResource("3_ho0li")]

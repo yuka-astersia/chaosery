@@ -19,6 +19,9 @@ signal back_to_main_menu
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
+	
+	# don't mind this... im gonna write a new algo after finishing the general app
+	
 	var score_data = score_manager.load_score()
 	
 	rank1_name.text = str(score_data[0]["name"])
