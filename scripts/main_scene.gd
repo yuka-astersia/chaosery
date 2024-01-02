@@ -3,7 +3,7 @@ extends Node2D
 var scene_instance: Node2D
 var scene_name: String
 
-@export var default_scene: String = "menus/main_menu"
+@export var default_scene: String = "menus/leaderboard_menu"
 
 @onready var menu_container: Node2D = $MenuContainer
 
@@ -32,3 +32,6 @@ func unload_scene():
 
 func new_game():
 	load_scene("menus/game_menu")
+
+func open_leaderboard():
+	load_scene("menus/leaderboard_menu")

@@ -20,4 +20,12 @@ offset_right = 617.0
 offset_bottom = 181.0
 text = "New Game"
 
+[node name="LeaderboardButton" type="Button" parent="MenuControl/MenuItems"]
+offset_left = 520.0
+offset_top = 199.0
+offset_right = 628.0
+offset_bottom = 230.0
+text = "Leaderboard"
+
 [connection signal="pressed" from="MenuControl/MenuItems/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="MenuControl/MenuItems/LeaderboardButton" to="." method="_on_leaderboard_button_pressed"]

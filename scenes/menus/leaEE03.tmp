@@ -1,0 +1,145 @@
+[gd_scene load_steps=4 format=3 uid="uid://brcv4vmt4et3y"]
+
+[ext_resource type="Script" path="res://scripts/menus/leaderboard_menu.gd" id="1_rm6uo"]
+[ext_resource type="Texture2D" uid="uid://bp4rcgwf1wp6p" path="res://assets/sprites/dungeons/arena 1 pixel.png" id="1_vgdwq"]
+[ext_resource type="PackedScene" uid="uid://bkc2qijvriojc" path="res://scenes/score_manager.tscn" id="3_k2w2r"]
+
+[node name="LeaderboardMenu" type="Node2D"]
+script = ExtResource("1_rm6uo")
+
+[node name="LeaderboardBackground" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(406, 407)
+scale = Vector2(2.4175, 1.90375)
+texture = ExtResource("1_vgdwq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 540.0
+offset_top = 83.0
+offset_right = 640.0
+offset_bottom = 106.0
+text = "Leaderboard"
+
+[node name="LeaderboardData" type="Node2D" parent="."]
+
+[node name="Rank1" type="Node2D" parent="LeaderboardData"]
+position = Vector2(1, 0)
+
+[node name="NumberLabel" type="Label" parent="LeaderboardData/Rank1"]
+offset_left = 111.0
+offset_top = 197.0
+offset_right = 133.0
+offset_bottom = 220.0
+text = "1. "
+
+[node name="NameLabel" type="Label" parent="LeaderboardData/Rank1"]
+offset_left = 132.0
+offset_top = 196.0
+offset_right = 297.0
+offset_bottom = 219.0
+text = "Belum ada skor.........."
+
+[node name="ScoreLabel" type="Label" parent="LeaderboardData/Rank1"]
+offset_left = 1080.0
+offset_top = 198.0
+offset_right = 1120.0
+offset_bottom = 221.0
+text = "0"
+
+[node name="Rank2" type="Node2D" parent="LeaderboardData"]
+position = Vector2(1, 25)
+
+[node name="NumberLabel" type="Label" parent="LeaderboardData/Rank2"]
+offset_left = 110.0
+offset_top = 197.0
+offset_right = 132.0
+offset_bottom = 220.0
+text = "2. "
+
+[node name="NameLabel" type="Label" parent="LeaderboardData/Rank2"]
+offset_left = 132.0
+offset_top = 196.0
+offset_right = 297.0
+offset_bottom = 219.0
+text = "Belum ada skor.........."
+
+[node name="ScoreLabel" type="Label" parent="LeaderboardData/Rank2"]
+offset_left = 1080.0
+offset_top = 198.0
+offset_right = 1120.0
+offset_bottom = 221.0
+text = "0"
+
+[node name="Rank3" type="Node2D" parent="LeaderboardData"]
+position = Vector2(1, 50)
+
+[node name="NumberLabel" type="Label" parent="LeaderboardData/Rank3"]
+offset_left = 111.0
+offset_top = 197.0
+offset_right = 133.0
+offset_bottom = 220.0
+text = "3. "
+
+[node name="NameLabel" type="Label" parent="LeaderboardData/Rank3"]
+offset_left = 132.0
+offset_top = 196.0
+offset_right = 297.0
+offset_bottom = 219.0
+text = "Belum ada skor.........."
+
+[node name="ScoreLabel" type="Label" parent="LeaderboardData/Rank3"]
+offset_left = 1080.0
+offset_top = 198.0
+offset_right = 1120.0
+offset_bottom = 221.0
+text = "0"
+
+[node name="Rank4" type="Node2D" parent="LeaderboardData"]
+position = Vector2(1, 75)
+
+[node name="NumberLabel" type="Label" parent="LeaderboardData/Rank4"]
+offset_left = 111.0
+offset_top = 197.0
+offset_right = 133.0
+offset_bottom = 220.0
+text = "4. "
+
+[node name="NameLabel" type="Label" parent="LeaderboardData/Rank4"]
+offset_left = 132.0
+offset_top = 196.0
+offset_right = 297.0
+offset_bottom = 219.0
+text = "Belum ada skor.........."
+
+[node name="ScoreLabel" type="Label" parent="LeaderboardData/Rank4"]
+offset_left = 1080.0
+offset_top = 198.0
+offset_right = 1120.0
+offset_bottom = 221.0
+text = "0"
+
+[node name="Rank5" type="Node2D" parent="LeaderboardData"]
+position = Vector2(1, 100)
+
+[node name="NumberLabel" type="Label" parent="LeaderboardData/Rank5"]
+offset_left = 111.0
+offset_top = 197.0
+offset_right = 133.0
+offset_bottom = 220.0
+text = "5. "
+
+[node name="NameLabel" type="Label" parent="LeaderboardData/Rank5"]
+offset_left = 132.0
+offset_top = 196.0
+offset_right = 297.0
+offset_bottom = 219.0
+text = "Belum ada skor.........."
+
+[node name="ScoreLabel" type="Label" parent="LeaderboardData/Rank5"]
+offset_left = 1080.0
+offset_top = 198.0
+offset_right = 1120.0
+offset_bottom = 221.0
+text = "0"
+
+[node name="ScoreManager" parent="." instance=ExtResource("3_k2w2r")]

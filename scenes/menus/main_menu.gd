@@ -1,6 +1,7 @@
 extends Node2D
 
 signal new_game
+signal open_leaderboard
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,3 +15,7 @@ func _process(_delta):
 
 func _on_new_game_button_pressed():
 	new_game.emit()
+
+
+func _on_leaderboard_button_pressed():
+	open_leaderboard.emit()
