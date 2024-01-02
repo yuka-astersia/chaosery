@@ -1,27 +1,22 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxtbsg14p30si"]
 
 [ext_resource type="Script" path="res://scripts/players/player.gd" id="1_ao2o1"]
-[ext_resource type="Texture2D" uid="uid://xpyn1e4stuf7" path="res://assets/sprites/players/player.png" id="2_17bnk"]
+[ext_resource type="Texture2D" uid="uid://ltr06ifuqreb" path="res://icon.svg" id="1_exwgw"]
 [ext_resource type="PackedScene" uid="uid://bkc2qijvriojc" path="res://scenes/score_manager.tscn" id="3_cblva"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_j3axt"]
-radius = 46.0977
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ic7l"]
+size = Vector2(123.5, 118.25)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 6
 script = ExtResource("1_ao2o1")
 
-[node name="BulletMarker" type="Marker2D" parent="."]
-position = Vector2(116, 10)
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_17bnk")
+texture = ExtResource("1_exwgw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-32, 0)
-shape = SubResource("CircleShape2D_j3axt")
+position = Vector2(0.25, 1.875)
+shape = SubResource("RectangleShape2D_2ic7l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -4000
@@ -32,6 +27,8 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="ShootingTimer" type="Timer" parent="."]
+
+[node name="BulletMarker" type="Marker2D" parent="."]
 
 [node name="ScoreManager" parent="." instance=ExtResource("3_cblva")]
 save_file_path = "res://data/scores.json"

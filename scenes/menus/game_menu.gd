@@ -8,6 +8,7 @@ extends Node2D
 func _ready():
 	
 	var dungeon_id = rng.randi_range(1, 2)
+	print(dungeon_id)
 	var dungeon_resource = load("res://scenes/dungeons/dungeon_" + str(dungeon_id) + ".tscn")
 	var dungeon_scene = dungeon_resource.instantiate()
 	dungeon_scene.scale = Vector2(2.5, 2.5)

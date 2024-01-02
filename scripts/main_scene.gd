@@ -3,7 +3,7 @@ extends Node2D
 var scene_instance: Node2D
 var scene_name: String
 
-@export var default_scene: String = "menus/game_menu"
+@export var default_scene: String = "menus/main_menu"
 
 @onready var menu_container: Node2D = $MenuContainer
 

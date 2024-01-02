@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var max_enemy_number: int = 2
+@export var max_enemy_number: int = 0
 
 var spawner_in_cooldown: int = false
 @onready var player = get_parent().get_parent().get_parent().get_child(1)
@@ -23,7 +23,7 @@ func _process(delta):
 		
 		var enemy: CharacterBody2D = enemies[randi() % enemies.size()].instantiate()
 		enemy.position = player.position + Vector2(250, 0).rotated(randf_range(0, 2*PI))
-		enemy.scale = player.scale * .50
+		enemy.scale = player.scale * .25
 		enemy.target = player
 		enemies_container.add_child(enemy)
 		$SpawnerTimer.start()

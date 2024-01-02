@@ -16,9 +16,8 @@ func _physics_process(delta):
 	velocity = movement_direction * movement_speed
 	
 	move_and_slide()
-	#look_at(get_global_mouse_position())
+	look_at(get_global_mouse_position())
 	player_direction = (get_global_mouse_position() - position).normalized()
-
 	if Input.is_action_just_pressed("attack"):
 		shoot()
 
@@ -41,6 +40,9 @@ func shoot():
 
 func game_over(): 
 	var score = get_parent().get_child(2).get_child(3).text
+	var parent = get_parent().get_parent().get_parent()
+	
+	parent.open_leaderboard()
 	
 	score_manager.save_score(score, 'Unnamed')
 	
