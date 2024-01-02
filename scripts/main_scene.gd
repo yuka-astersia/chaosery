@@ -35,3 +35,6 @@ func new_game():
 
 func open_leaderboard():
 	load_scene("menus/leaderboard_menu")
+
+func open_main_menu():
+	load_scene("menus/main_menu")

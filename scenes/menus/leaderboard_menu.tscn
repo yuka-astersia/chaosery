@@ -13,129 +13,142 @@ position = Vector2(406, 407)
 scale = Vector2(2.4175, 1.90375)
 texture = ExtResource("1_vgdwq")
 
-[node name="Label" type="Label" parent="."]
+[node name="LeaderboardControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LeaderboardLabel" type="Label" parent="LeaderboardControl"]
 offset_left = 540.0
 offset_top = 83.0
 offset_right = 640.0
 offset_bottom = 106.0
 text = "Leaderboard"
 
-[node name="LeaderboardData" type="Node2D" parent="."]
+[node name="BackToMainMenuButton" type="Button" parent="LeaderboardControl"]
+offset_left = 506.0
+offset_top = 481.0
+offset_right = 666.0
+offset_bottom = 512.0
+text = "Back To Main Menu"
 
-[node name="Rank1" type="Node2D" parent="LeaderboardData"]
+[node name="LeaderboardData" type="Node2D" parent="LeaderboardControl"]
+
+[node name="Rank1" type="Node2D" parent="LeaderboardControl/LeaderboardData"]
 position = Vector2(1, 0)
 
-[node name="NumberLabel" type="Label" parent="LeaderboardData/Rank1"]
+[node name="NumberLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank1"]
 offset_left = 111.0
 offset_top = 197.0
 offset_right = 133.0
 offset_bottom = 220.0
 text = "1. "
 
-[node name="NameLabel" type="Label" parent="LeaderboardData/Rank1"]
+[node name="NameLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank1"]
 offset_left = 132.0
 offset_top = 196.0
 offset_right = 297.0
 offset_bottom = 219.0
 text = "Belum ada skor.........."
 
-[node name="ScoreLabel" type="Label" parent="LeaderboardData/Rank1"]
+[node name="ScoreLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank1"]
 offset_left = 1080.0
 offset_top = 198.0
 offset_right = 1120.0
 offset_bottom = 221.0
 text = "0"
 
-[node name="Rank2" type="Node2D" parent="LeaderboardData"]
+[node name="Rank2" type="Node2D" parent="LeaderboardControl/LeaderboardData"]
 position = Vector2(1, 25)
 
-[node name="NumberLabel" type="Label" parent="LeaderboardData/Rank2"]
+[node name="NumberLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank2"]
 offset_left = 110.0
 offset_top = 197.0
 offset_right = 132.0
 offset_bottom = 220.0
 text = "2. "
 
-[node name="NameLabel" type="Label" parent="LeaderboardData/Rank2"]
+[node name="NameLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank2"]
 offset_left = 132.0
 offset_top = 196.0
 offset_right = 297.0
 offset_bottom = 219.0
 text = "Belum ada skor.........."
 
-[node name="ScoreLabel" type="Label" parent="LeaderboardData/Rank2"]
+[node name="ScoreLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank2"]
 offset_left = 1080.0
 offset_top = 198.0
 offset_right = 1120.0
 offset_bottom = 221.0
 text = "0"
 
-[node name="Rank3" type="Node2D" parent="LeaderboardData"]
+[node name="Rank3" type="Node2D" parent="LeaderboardControl/LeaderboardData"]
 position = Vector2(1, 50)
 
-[node name="NumberLabel" type="Label" parent="LeaderboardData/Rank3"]
+[node name="NumberLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank3"]
 offset_left = 111.0
 offset_top = 197.0
 offset_right = 133.0
 offset_bottom = 220.0
 text = "3. "
 
-[node name="NameLabel" type="Label" parent="LeaderboardData/Rank3"]
+[node name="NameLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank3"]
 offset_left = 132.0
 offset_top = 196.0
 offset_right = 297.0
 offset_bottom = 219.0
 text = "Belum ada skor.........."
 
-[node name="ScoreLabel" type="Label" parent="LeaderboardData/Rank3"]
+[node name="ScoreLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank3"]
 offset_left = 1080.0
 offset_top = 198.0
 offset_right = 1120.0
 offset_bottom = 221.0
 text = "0"
 
-[node name="Rank4" type="Node2D" parent="LeaderboardData"]
+[node name="Rank4" type="Node2D" parent="LeaderboardControl/LeaderboardData"]
 position = Vector2(1, 75)
 
-[node name="NumberLabel" type="Label" parent="LeaderboardData/Rank4"]
+[node name="NumberLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank4"]
 offset_left = 111.0
 offset_top = 197.0
 offset_right = 133.0
 offset_bottom = 220.0
 text = "4. "
 
-[node name="NameLabel" type="Label" parent="LeaderboardData/Rank4"]
+[node name="NameLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank4"]
 offset_left = 132.0
 offset_top = 196.0
 offset_right = 297.0
 offset_bottom = 219.0
 text = "Belum ada skor.........."
 
-[node name="ScoreLabel" type="Label" parent="LeaderboardData/Rank4"]
+[node name="ScoreLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank4"]
 offset_left = 1080.0
 offset_top = 198.0
 offset_right = 1120.0
 offset_bottom = 221.0
 text = "0"
 
-[node name="Rank5" type="Node2D" parent="LeaderboardData"]
+[node name="Rank5" type="Node2D" parent="LeaderboardControl/LeaderboardData"]
 position = Vector2(1, 100)
 
-[node name="NumberLabel" type="Label" parent="LeaderboardData/Rank5"]
+[node name="NumberLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank5"]
 offset_left = 111.0
 offset_top = 197.0
 offset_right = 133.0
 offset_bottom = 220.0
 text = "5. "
 
-[node name="NameLabel" type="Label" parent="LeaderboardData/Rank5"]
+[node name="NameLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank5"]
 offset_left = 132.0
 offset_top = 196.0
 offset_right = 297.0
 offset_bottom = 219.0
 text = "Belum ada skor.........."
 
-[node name="ScoreLabel" type="Label" parent="LeaderboardData/Rank5"]
+[node name="ScoreLabel" type="Label" parent="LeaderboardControl/LeaderboardData/Rank5"]
 offset_left = 1080.0
 offset_top = 198.0
 offset_right = 1120.0
@@ -143,3 +156,5 @@ offset_bottom = 221.0
 text = "0"
 
 [node name="ScoreManager" parent="." instance=ExtResource("3_k2w2r")]
+
+[connection signal="pressed" from="LeaderboardControl/BackToMainMenuButton" to="." method="_on_back_to_main_menu_button_pressed"]
