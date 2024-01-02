@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://coibaggu7o8ub"]
+
+[node name="GameMenu" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 580.0
+offset_top = 119.0
+offset_right = 707.0
+offset_bottom = 142.0
+text = "New Game bang"

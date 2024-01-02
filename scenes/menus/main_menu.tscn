@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bltmsbqlba77l"]
+
+[ext_resource type="Script" path="res://scenes/menus/main_menu.gd" id="1_p66mh"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_p66mh")
+
+[node name="MenuControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuItems" type="Node2D" parent="MenuControl"]
+
+[node name="NewGameButton" type="Button" parent="MenuControl/MenuItems"]
+offset_left = 524.0
+offset_top = 150.0
+offset_right = 617.0
+offset_bottom = 181.0
+text = "New Game"
+
+[connection signal="pressed" from="MenuControl/MenuItems/NewGameButton" to="." method="_on_new_game_button_pressed"]
