@@ -5,11 +5,12 @@ extends Node2D
 
 var dungeon_instance: Node2D
 var dungeons: Array = [
-	"res://scenes/dungeons/dungeon_1.tscn"
+	"res://scenes/dungeons/dungeon_1.tscn",
+	"res://scenes/dungeons/dungeon_2.tscn"
 ]
 
 func get_dungeon():
-	var dungeon_resource = load(dungeons[0])
+	var dungeon_resource = load(dungeons[randi() % dungeons.size()])
 	var dungeon_instance = dungeon_resource.instantiate()
 	return dungeon_instance
 
