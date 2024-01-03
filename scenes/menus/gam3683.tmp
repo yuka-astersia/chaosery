@@ -37,5 +37,7 @@ scale = Vector2(0.25, 0.25)
 [node name="EnemiesContainer" type="Node2D" parent="."]
 
 [node name="Eyeball" parent="EnemiesContainer" instance=ExtResource("4_cwvyw")]
+movement_speed = null
+hp = null
 
 [connection signal="shoot" from="Player" to="." method="_on_player_shoot"]
