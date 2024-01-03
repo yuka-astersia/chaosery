@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmtd2hhyiovxs"]
+
+[ext_resource type="Script" path="res://scripts/projectiles/arrow.gd" id="1_i1w6s"]
+[ext_resource type="Texture2D" uid="uid://dh34jdl426ux3" path="res://assets/sprites/projectiles/arrow.png" id="2_vmadr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ajpfd"]
+height = 310.0
+
+[node name="Arrow" type="Area2D"]
+script = ExtResource("1_i1w6s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -0.785398
+texture = ExtResource("2_vmadr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -28)
+shape = SubResource("CapsuleShape2D_ajpfd")

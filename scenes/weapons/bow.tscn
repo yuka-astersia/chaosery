@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://wgryrbndjqhe"]
+
+[ext_resource type="Script" path="res://scripts/weapons/bow.gd" id="1_c310y"]
+
+[node name="Bow" type="Node2D"]
+script = ExtResource("1_c310y")
+
+[node name="SillyArrow" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="SillyArrow"]
+offset_left = 94.0
+offset_top = -1.0
+offset_right = 147.0
+offset_bottom = 2.0
+scale = Vector2(0.189112, 0.353212)
+
+[node name="ColorRect2" type="ColorRect" parent="SillyArrow"]
+offset_left = 101.0
+offset_top = -2.0
+offset_right = 105.0
+offset_bottom = -1.0
+rotation = 0.276548
+
+[node name="ColorRect3" type="ColorRect" parent="SillyArrow"]
+offset_left = 101.0
+offset_right = 105.0
+offset_bottom = 1.0
+rotation = -0.20262
+
+[node name="ProjectileSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(67, 0)
+
+[node name="AttackCooldown" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]

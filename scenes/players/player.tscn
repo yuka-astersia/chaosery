@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlhffyeycc4bh"]
+[gd_scene load_steps=5 format=3 uid="uid://dlhffyeycc4bh"]
 
 [ext_resource type="Texture2D" uid="uid://yy7n2h0vvou7" path="res://assets/sprites/players/top_down_placeholder.png" id="1_gobup"]
 [ext_resource type="Script" path="res://scripts/players/player.gd" id="1_u7ckd"]
+[ext_resource type="PackedScene" uid="uid://wgryrbndjqhe" path="res://scenes/weapons/bow.tscn" id="3_4vtkg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i6f08"]
 radius = 29.0689
@@ -14,7 +15,6 @@ texture_filter = 1
 texture_repeat = 1
 position = Vector2(10, 0)
 rotation = 1.51844
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_gobup")
 
 [node name="PlayerCamera" type="Camera2D" parent="."]
@@ -24,27 +24,6 @@ rotation_smoothing_enabled = true
 [node name="PlayerHitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_i6f08")
 
-[node name="Weapon" type="Node2D" parent="."]
+[node name="Bow" parent="." instance=ExtResource("3_4vtkg")]
 
-[node name="ProjectileSpawnPoint" type="Marker2D" parent="Weapon"]
-position = Vector2(67, 0)
-
-[node name="ColorRect" type="ColorRect" parent="Weapon"]
-offset_left = 94.0
-offset_top = -1.0
-offset_right = 147.0
-offset_bottom = 2.0
-scale = Vector2(0.189112, 0.353212)
-
-[node name="ColorRect2" type="ColorRect" parent="Weapon"]
-offset_left = 101.0
-offset_top = -2.0
-offset_right = 105.0
-offset_bottom = -1.0
-rotation = 0.276548
-
-[node name="ColorRect3" type="ColorRect" parent="Weapon"]
-offset_left = 101.0
-offset_right = 105.0
-offset_bottom = 1.0
-rotation = -0.20262
+[connection signal="shoot" from="Bow" to="." method="_on_bow_shoot"]

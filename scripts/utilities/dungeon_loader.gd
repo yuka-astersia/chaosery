@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var dungeon_container: Node2D = $DungeonContainer
+@onready var player: CharacterBody2D = $"../Player"
 
 var dungeon_instance: Node2D
 var dungeons: Array = [
@@ -15,3 +16,5 @@ func get_dungeon():
 func _ready():
 	dungeon_instance = get_dungeon()
 	dungeon_container.add_child(dungeon_instance)
+	
+	player.position = dungeon_instance.get_spawn_point()

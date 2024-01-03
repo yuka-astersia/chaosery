@@ -3,7 +3,7 @@ extends Node2D
 @onready var scene_loader: Node2D = $SceneLoader
 @onready var signal_manager: Node2D = $SignalManager
 
-@export var default_scene: String = "menus/main_menu"
+@export var default_scene: String = "menus/game_menu"
 
 func _ready():
 	scene_loader.signal_manager = signal_manager
