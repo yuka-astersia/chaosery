@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://cn0m3nsiufp1c"]
+
+[ext_resource type="Texture2D" uid="uid://l6tm2j4urxf" path="res://assets/dungeons/dungeon_1.png" id="1_k5te8"]
+[ext_resource type="Script" path="res://scripts/dungeons/dungeon.gd" id="1_nf5np"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pninj"]
+size = Vector2(48, 1798)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pj5l5"]
+size = Vector2(1518.5, 39.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg20u"]
+size = Vector2(42.5, 580)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3ml7"]
+size = Vector2(571, 41.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtd70"]
+size = Vector2(38, 910.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_heg3a"]
+size = Vector2(1157, 161)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_c2it6"]
+a = Vector2(569, -677)
+b = Vector2(300, -374)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo6ej"]
+size = Vector2(627, 144)
+
+[node name="Dungeon1" type="Node2D"]
+script = ExtResource("1_nf5np")
+
+[node name="DungeonSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(224, 198)
+scale = Vector2(3, 3)
+texture = ExtResource("1_k5te8")
+
+[node name="DungeonWall" type="StaticBody2D" parent="."]
+
+[node name="Wall1" type="CollisionShape2D" parent="DungeonWall"]
+position = Vector2(1175, 84)
+shape = SubResource("RectangleShape2D_pninj")
+
+[node name="Wall2" type="CollisionShape2D" parent="DungeonWall"]
+position = Vector2(434.25, 960.75)
+shape = SubResource("RectangleShape2D_pj5l5")
+
+[node name="Wall3" type="CollisionShape2D" parent="DungeonWall"]
+position = Vector2(-306.25, 653)
+shape = SubResource("RectangleShape2D_rg20u")
+
+[node name="Wall4" type="CollisionShape2D" parent="DungeonWall"]
+position = Vector2(-608.5, 352.75)
+shape = SubResource("RectangleShape2D_t3ml7")
+
+[node name="Wall5" type="CollisionShape2D" parent="DungeonWall"]
+position = Vector2(-876, -79.75)
+shape = SubResource("RectangleShape2D_rtd70")
+
+[node name="Wall6" type="CollisionShape2D" parent="DungeonWall"]
+position = Vector2(-277, -450.5)
+shape = SubResource("RectangleShape2D_heg3a")
+
+[node name="Wall7" type="CollisionShape2D" parent="DungeonWall"]
+shape = SubResource("SegmentShape2D_c2it6")
+
+[node name="Wall8" type="CollisionShape2D" parent="DungeonWall"]
+position = Vector2(880.5, -743)
+shape = SubResource("RectangleShape2D_eo6ej")
+
+[node name="PlayerSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(949, 464)

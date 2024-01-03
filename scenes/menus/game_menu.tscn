@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnqnblxywr5en"]
+
+[ext_resource type="PackedScene" uid="uid://c16sc1sni2n3e" path="res://scenes/utilities/dungeon_loader.tscn" id="1_evjjv"]
+[ext_resource type="PackedScene" uid="uid://dlhffyeycc4bh" path="res://scenes/players/player.tscn" id="2_o31ue"]
+
+[node name="GameMenu" type="Node2D"]
+
+[node name="DungeonLoader" parent="." instance=ExtResource("1_evjjv")]
+
+[node name="Player" parent="." instance=ExtResource("2_o31ue")]
+
+[node name="GameCanvas" type="CanvasLayer" parent="."]
+
+[node name="UserScoreContainer" type="Node2D" parent="GameCanvas"]
+position = Vector2(955, 17)
+
+[node name="ScoreLabel" type="Label" parent="GameCanvas/UserScoreContainer"]
+offset_left = 17.0
+offset_top = -13.0
+offset_right = 69.0
+offset_bottom = 10.0
+text = "Score: "
+
+[node name="ScoreValue" type="Label" parent="GameCanvas/UserScoreContainer"]
+offset_left = 94.0
+offset_top = -14.0
+offset_right = 134.0
+offset_bottom = 9.0
+text = "0"
