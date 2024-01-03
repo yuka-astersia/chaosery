@@ -11,8 +11,8 @@ script = ExtResource("1_5es02")
 
 [node name="MenuWallpaper" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(653, 610.5)
-scale = Vector2(2.7619, 3.11772)
+position = Vector2(935, 373)
+scale = Vector2(1.11333, 1.14571)
 texture = ExtResource("2_tg10y")
 
 [node name="MenuCanvas" type="CanvasLayer" parent="."]
