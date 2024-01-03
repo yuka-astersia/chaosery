@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkwu1bctrw24b"]
+
+[ext_resource type="Texture2D" uid="uid://ye3ds2uvalbv" path="res://assets/cg/4243109.jpg" id="1_uani0"]
+[ext_resource type="Script" path="res://scripts/ui/menu_wallpaper.gd" id="2_kd8uv"]
+
+[node name="MenuWallpaper" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(935, 373)
+scale = Vector2(1.11333, 1.14571)
+texture = ExtResource("1_uani0")
+script = ExtResource("2_kd8uv")

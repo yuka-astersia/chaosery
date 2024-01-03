@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://3uopxexkq85t"]
 
 [ext_resource type="Script" path="res://scripts/menus/main_menu.gd" id="1_5es02"]
-[ext_resource type="Texture2D" uid="uid://ye3ds2uvalbv" path="res://assets/cg/4243109.jpg" id="2_tg10y"]
+[ext_resource type="PackedScene" uid="uid://bkwu1bctrw24b" path="res://scenes/ui/menu_wallpaper.tscn" id="2_jt0gd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bqqt5"]
 font_size = 64
@@ -9,11 +9,7 @@ font_size = 64
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_5es02")
 
-[node name="MenuWallpaper" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(935, 373)
-scale = Vector2(1.11333, 1.14571)
-texture = ExtResource("2_tg10y")
+[node name="MenuWallpaper" parent="." instance=ExtResource("2_jt0gd")]
 
 [node name="MenuCanvas" type="CanvasLayer" parent="."]
 
