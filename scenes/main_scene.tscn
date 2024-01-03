@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5dtanmgrevp5"]
+
+[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_clh5k"]
+[ext_resource type="PackedScene" uid="uid://dlip6tst71rhx" path="res://scenes/utilities/scene_loader.tscn" id="1_gblpq"]
+[ext_resource type="PackedScene" uid="uid://cb20ipgb6cjyl" path="res://scenes/utilities/signal_manager.tscn" id="2_aeu2h"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_clh5k")
+
+[node name="SceneLoader" parent="." instance=ExtResource("1_gblpq")]
+
+[node name="SignalManager" parent="." instance=ExtResource("2_aeu2h")]
+
+[connection signal="change_scene" from="SignalManager" to="." method="_on_signal_manager_change_scene"]

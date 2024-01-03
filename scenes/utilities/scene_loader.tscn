@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlip6tst71rhx"]
+
+[ext_resource type="Script" path="res://scripts/utilities/scene_loader.gd" id="1_cena8"]
+
+[node name="SceneLoader" type="Node2D"]
+script = ExtResource("1_cena8")
+
+[node name="SceneContainer" type="Node2D" parent="."]
