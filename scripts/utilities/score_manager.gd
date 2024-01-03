@@ -45,7 +45,7 @@ func load_score():
 	
 	return score_data
 	
-func save_score(score_value, score_name):
+func save_score(score_name, score_value):
 	var highscores = load_score()
 	highscores.append({"name": score_name, "score": score_value})
 	var total_written = 0

@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bo2ut8eaydw3g"]
+[gd_scene load_steps=5 format=3 uid="uid://bo2ut8eaydw3g"]
 
 [ext_resource type="Texture2D" uid="uid://dbs5t3xdtk5gq" path="res://assets/sprites/enemies/eyeball.png" id="1_6syp7"]
 [ext_resource type="Script" path="res://scripts/enemies/eyeball.gd" id="1_hbm37"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dkn2n"]
-radius = 164.003
+radius = 158.114
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dqnc1"]
+radius = 167.726
 
 [node name="Eyeball" type="CharacterBody2D"]
-collision_layer = 13
+collision_layer = 15
 collision_mask = 2
 script = ExtResource("1_hbm37")
 
@@ -17,3 +20,11 @@ texture = ExtResource("1_6syp7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_dkn2n")
+
+[node name="DetecionArea" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetecionArea"]
+shape = SubResource("CircleShape2D_dqnc1")
+
+[connection signal="body_entered" from="DetecionArea" to="." method="_on_detecion_area_body_entered"]

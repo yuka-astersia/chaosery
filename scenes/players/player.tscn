@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlhffyeycc4bh"]
+[gd_scene load_steps=6 format=3 uid="uid://dlhffyeycc4bh"]
 
 [ext_resource type="Texture2D" uid="uid://yy7n2h0vvou7" path="res://assets/sprites/players/top_down_placeholder.png" id="1_gobup"]
 [ext_resource type="Script" path="res://scripts/players/player.gd" id="1_u7ckd"]
 [ext_resource type="PackedScene" uid="uid://wgryrbndjqhe" path="res://scenes/weapons/bow.tscn" id="3_4vtkg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i6f08"]
-radius = 29.0689
+radius = 121.264
+
+[sub_resource type="LabelSettings" id="LabelSettings_e48pq"]
+font_size = 32
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 10
@@ -26,5 +29,17 @@ rotation_smoothing_enabled = true
 shape = SubResource("CircleShape2D_i6f08")
 
 [node name="Bow" parent="." instance=ExtResource("3_4vtkg")]
+
+[node name="HpBar" type="Node2D" parent="."]
+position = Vector2(-193, -26)
+rotation = -1.5708
+
+[node name="HpLabel" type="Label" parent="HpBar"]
+offset_left = -57.0
+offset_top = -39.0
+offset_right = -3.0
+offset_bottom = 5.99999
+text = "100"
+label_settings = SubResource("LabelSettings_e48pq")
 
 [connection signal="shoot" from="Bow" to="." method="_on_bow_shoot"]

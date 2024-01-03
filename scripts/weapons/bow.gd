@@ -10,7 +10,6 @@ var can_attack: bool = true
 func _process(delta):
 	
 	if Input.is_action_just_pressed("attack") and can_attack:
-		print("Attack")
 		shoot.emit(create_projectiles())
 		can_attack = false
 
