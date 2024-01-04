@@ -4,7 +4,9 @@ var travel_direction: Vector2 = Vector2.UP
 var travel_speed: float = 1000
 var travel_length: float = 0
 var max_travel_length: float = 7000
-var damage: int = 100
+var damage: int = 10
+var critical_damage: int = 100
+var critical_rate: float = .2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,6 +24,10 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body is CharacterBody2D or body is StaticBody2D:
-		body.hp -= damage
+		if body is CharacterBody2D:
+			if randf() < critical_rate:
+				damage = critical_damage
+				print("Crit on: ", body)
+			body.damaged(damage)
 		queue_free()
 

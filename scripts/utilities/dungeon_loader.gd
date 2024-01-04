@@ -6,7 +6,9 @@ extends Node2D
 var dungeon_instance: Node2D
 var dungeons: Array = [
 	"res://scenes/dungeons/dungeon_1.tscn",
-	"res://scenes/dungeons/dungeon_2.tscn"
+	"res://scenes/dungeons/dungeon_2.tscn",
+	"res://scenes/dungeons/dungeon_3.tscn",
+	"res://scenes/dungeons/dungeon_4.tscn"
 ]
 
 func get_dungeon():

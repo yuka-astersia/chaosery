@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bb1ilc17mwcis"]
+[gd_scene load_steps=11 format=3 uid="uid://u4fkh5qtbq2r"]
 
 [ext_resource type="Texture2D" uid="uid://cfcyq0rhy8h0b" path="res://assets/dungeons/dungeon_2.png" id="1_bhsua"]
 [ext_resource type="Script" path="res://scripts/dungeons/dungeon.gd" id="1_xkc0q"]
@@ -36,7 +36,9 @@ position = Vector2(461, 404)
 scale = Vector2(2.51, 1.70125)
 texture = ExtResource("1_bhsua")
 
-[node name="DungeonWall" type="Area2D" parent="."]
+[node name="DungeonWall" type="StaticBody2D" parent="."]
+collision_layer = 5
+collision_mask = 8
 
 [node name="Wall1" type="CollisionShape2D" parent="DungeonWall"]
 position = Vector2(265, -180.25)
@@ -70,3 +72,4 @@ position = Vector2(-486.5, 51)
 shape = SubResource("RectangleShape2D_7sgk8")
 
 [node name="PlayerSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(732, 226)

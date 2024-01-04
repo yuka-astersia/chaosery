@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://kwfnu40tkx1h"]
+
+[ext_resource type="Script" path="res://scripts/dungeons/dungeon.gd" id="1_7ircu"]
+[ext_resource type="Texture2D" uid="uid://bk76pdrox7avc" path="res://assets/dungeons/dungeon_4.png" id="2_eaqqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p11i4"]
+size = Vector2(566, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5fqo"]
+size = Vector2(45, 819)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5vsj"]
+size = Vector2(1189, 40.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fx0mn"]
+size = Vector2(37, 826.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sjdw"]
+size = Vector2(357, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iurqi"]
+size = Vector2(43, 821)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nfbu"]
+size = Vector2(873, 133)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qwtg"]
+size = Vector2(42, 528)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4r6a"]
+size = Vector2(1192, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4did"]
+size = Vector2(42, 1217)
+
+[node name="Dungeon4" type="Node2D"]
+script = ExtResource("1_7ircu")
+
+[node name="DungeonSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(291, 437)
+scale = Vector2(2.89625, 2.615)
+texture = ExtResource("2_eaqqs")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 5
+collision_mask = 8
+
+[node name="Wall1" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-551, 653.5)
+shape = SubResource("RectangleShape2D_p11i4")
+
+[node name="Wall2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-290.5, 1048.5)
+shape = SubResource("RectangleShape2D_m5fqo")
+
+[node name="Wall3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(291.5, 1441.25)
+shape = SubResource("RectangleShape2D_d5vsj")
+
+[node name="Wall4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(863.5, 1047.25)
+shape = SubResource("RectangleShape2D_fx0mn")
+
+[node name="Wall5" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1020.5, 657)
+shape = SubResource("RectangleShape2D_7sjdw")
+
+[node name="Wall6" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1173.5, 256.5)
+shape = SubResource("RectangleShape2D_iurqi")
+
+[node name="Wall7" type="CollisionShape2D" parent="Walls"]
+position = Vector2(762.5, -82.5)
+shape = SubResource("RectangleShape2D_0nfbu")
+
+[node name="Wall8" type="CollisionShape2D" parent="Walls"]
+position = Vector2(344, -284)
+shape = SubResource("RectangleShape2D_7qwtg")
+
+[node name="Wall9" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-231, -477)
+shape = SubResource("RectangleShape2D_m4r6a")
+
+[node name="Wall10" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-810, 60.5)
+shape = SubResource("RectangleShape2D_c4did")
+
+[node name="PlayerSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(844, 266)

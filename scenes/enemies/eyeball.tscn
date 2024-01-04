@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bo2ut8eaydw3g"]
+[gd_scene load_steps=6 format=3 uid="uid://bo2ut8eaydw3g"]
 
 [ext_resource type="Texture2D" uid="uid://dbs5t3xdtk5gq" path="res://assets/sprites/enemies/eyeball.png" id="1_6syp7"]
 [ext_resource type="Script" path="res://scripts/enemies/eyeball.gd" id="1_hbm37"]
@@ -8,6 +8,9 @@ radius = 158.114
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dqnc1"]
 radius = 167.726
+
+[sub_resource type="LabelSettings" id="LabelSettings_a5ags"]
+font_size = 32
 
 [node name="Eyeball" type="CharacterBody2D"]
 collision_layer = 15
@@ -26,5 +29,13 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetecionArea"]
 shape = SubResource("CircleShape2D_dqnc1")
+
+[node name="HpLabel" type="Label" parent="."]
+offset_left = -25.0
+offset_top = -219.0
+offset_right = 15.0
+offset_bottom = -196.0
+text = "10"
+label_settings = SubResource("LabelSettings_a5ags")
 
 [connection signal="body_entered" from="DetecionArea" to="." method="_on_detecion_area_body_entered"]

@@ -4,13 +4,21 @@ signal die
 
 @export var movement_speed: int = 150
 @onready var target: Node2D
-@export var hp: int = 20
+@export var hp: int = 10
 @export var score_gained: int = 10
 
 var game_menu: Node2D
 var crash_damage: int = 25
 
-func _physics_process(_delta):	
+func _ready():
+	$HpLabel.text = str(hp)
+
+func damaged(damage):
+	hp -= damage
+	
+	$HpLabel.text = str(hp)
+
+func _physics_process(_delta):
 	if hp <= 0:
 		game_menu.add_score(score_gained)
 		queue_free()
